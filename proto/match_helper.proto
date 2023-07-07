@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package match_helper;
+
+option go_package = "./proto;match_helper";
+
+service Match_helper {
+	rpc FillData(FillDataReq) returns (FillDataRsp) {}
+}
+
+message FillDataReq {
+	int64 count = 1;
+	int64 tt = 2;
+}
+
+message FillDataRsp {
+	string name = 1;
+}
